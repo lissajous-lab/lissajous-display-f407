@@ -2,6 +2,22 @@
   ******************************************************************************
   * @file    vision_slave.c
   * @brief   Camera-only requirement-5 command executor.
+  *
+  * 本文件是「从机」：只负责收命令、写 DDS、回应答，不主动发起任何交互。
+  * 谁扫频、扫到哪、什么时候放弃，全部由 K230 决定。三个 PD 按键负责把
+  * $START,LINE|CIRCLE|INFINITY 发给 K230 启动对应小问。
+  *
+  * 收：$SET / $FREQ / $PHASE / $RAMP / $DONE / $FAIL / $STOP / $K230_READY
+  * 回：$APPLIED,seq,probe  成功
+  *     $ERROR,seq,probe,原因  失败（参数非法 / 未运行 / 写 DDS 失败）
+  *     $MODE,VISION|NORMAL + $STM32_READY,<版本>  模式与握手
+  *
+  * 版本号里的 NO_TIMEOUT 指主控侧不主动超时清理会话：K230 挂掉时本机会一直
+  * 停在视觉模式等待。注意视觉模式是单向的，`app_mode` 进入后不再改回，
+  * 要回前四题只能复位（见 README 第 9 节）。这样避免出现
+  * 「主控已放弃但 K230 还在等应答」的僵局。
+  *
+  * 完整协议（帧格式、seq/probe 配对、重发、频率限幅）见 docs/vision-protocol.md。
   ******************************************************************************
   */
 
