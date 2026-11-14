@@ -415,6 +415,9 @@ Vpp_mV = 4 × |V| × 3300 / (窗和 × 4095)
 
 更多资料：[`docs/problem.md`](docs/problem.md) 赛题与实现对照 · [`docs/hardware.md`](docs/hardware.md) 硬件清单与接线 · [`docs/vision-protocol.md`](docs/vision-protocol.md) 第五题串口协议 · [`docs/history.md`](docs/history.md) 资料整理说明 · [`docs/media.md`](docs/media.md) 照片视频存放
 
+**分工说明**：这是队伍的参赛作品，队内负责视觉的同学实现了 `vision_slave.c` 与 `K230/main.py`，
+其余模块由本仓库维护者完成。具体见 [`K230/README.md`](K230/README.md) 第 7 节。
+
 参与改进前请先看 [`CONTRIBUTING.md`](CONTRIBUTING.md)，要点：
 
 - `main` 分支受保护，改动走 feature 分支 + PR
