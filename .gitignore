@@ -43,3 +43,12 @@ JLinkSettings.ini
 Thumbs.db
 desktop.ini
 .DS_Store
+
+# 图片原图（未压缩的手机照片，只本地保留）
+docs/images/_raw/
+
+# 视频一律不进仓库，走 Release 附件或 B 站
+*.mp4
+*.mov
+*.avi
+*.mkv

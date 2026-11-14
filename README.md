@@ -53,7 +53,10 @@ DDS 输出 ─► 调理 ──► PA2 / ADC2 ┘                               
 
 ## 3. 硬件
 
+硬件组成、物料清单、模拟前端做法见 **[docs/hardware.md](docs/hardware.md)**，本节只列关键参数与引脚。
+
 | 项目 | 型号 / 参数 |
+
 |---|---|
 | 主控 | STM32F407VGT6，主频 168 MHz |
 | 定时器时钟 | TIM3 输入 84 MHz（APB1 42 MHz × 定时器倍频 2） |
@@ -357,6 +360,14 @@ Vpp_mV = 4 × |V| × 3300 / (窗和 × 4095)
 ├── Middlewares/ST/ARM/DSP/       CMSIS-DSP 静态库
 ├── K230/main.py                  视觉子机脚本（第五题）
 ├── MDK-ARM/                      Keil 工程
+├── docs/
+│   ├── hardware.md               硬件清单、物料表、模拟前端做法
+│   ├── media.md                  照片与视频的存放规则
+│   └── images/                   实物照片（压缩后的）
+├── tools/compress_images.py      图片批量压缩（清 EXIF、限尺寸）
+├── CONTRIBUTING.md               协作规范
+├── THIRD_PARTY.md                第三方组件许可清单
+├── LICENSE                       MIT
 └── FFT.ioc                       CubeMX 配置（仅查阅）
 ```
 
@@ -393,6 +404,8 @@ Vpp_mV = 4 × |V| × 3300 / (窗和 × 4095)
 作者原创代码与文档采用 **MIT 许可**，见 [`LICENSE`](LICENSE)。可自由使用、修改、再分发，保留版权与许可声明即可。
 
 第三方组件（ST HAL、CMSIS、CMSIS-DSP）沿用其原始许可，版权归各自所有者，清单见 [`THIRD_PARTY.md`](THIRD_PARTY.md)。
+
+更多资料：[`docs/hardware.md`](docs/hardware.md) 硬件清单与物料表 · [`docs/media.md`](docs/media.md) 照片视频存放规则
 
 参与改进前请先看 [`CONTRIBUTING.md`](CONTRIBUTING.md)，要点：
 
