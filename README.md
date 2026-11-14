@@ -1,5 +1,9 @@
 # 李萨如图形显示控制装置
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Platform](https://img.shields.io/badge/MCU-STM32F407VGT6-blue.svg)]()
+[![IDE](https://img.shields.io/badge/IDE-Keil%20MDK%205-orange.svg)]()
+
 STM32F407 + AD9834 的相位闭环装置，2026 年电子设计竞赛 F 题实现。
 
 信号源接输入端，本板合成一路正弦接示波器 Y 通道，X 通道接信号源本身。两路频率成整数比、相位固定时，屏幕上出现静止的李萨如图形。装置要保证这个图形**不转**，并按题目要求切换同频/二倍频、0°/90° 相位与四档幅度。
@@ -381,3 +385,33 @@ Vpp_mV = 4 × |V| × 3300 / (窗和 × 4095)
 ## 10. 其他
 
 `Drivers/`、`Middlewares/` 以及 `Core/` 中由 STM32CubeMX 生成的框架代码版权归 STMicroelectronics，遵循其随附许可；业务逻辑集中在 `Core/Src` 各模块与 `app_config.h`，重新生成 CubeMX 代码不会覆盖它们（均在 `USER CODE` 区块内或独立文件中）。
+
+---
+
+## 11. 许可与协作
+
+作者原创代码与文档采用 **MIT 许可**，见 [`LICENSE`](LICENSE)。可自由使用、修改、再分发，保留版权与许可声明即可。
+
+第三方组件（ST HAL、CMSIS、CMSIS-DSP）沿用其原始许可，版权归各自所有者，清单见 [`THIRD_PARTY.md`](THIRD_PARTY.md)。
+
+参与改进前请先看 [`CONTRIBUTING.md`](CONTRIBUTING.md)，要点：
+
+- `main` 分支受保护，改动走 feature 分支 + PR
+- 硬件相关改动必须在 PR 里附实测条件与串口/示波器证据
+- 可调参数一律进 `app_config.h`，不改散落魔数
+- 不提交编译产物、个人 IDE 配置、论文与视频
+
+### 这个项目适合用来做什么
+
+- 学 STM32 + ADC/DMA 双路同步采样、CMSIS-DSP FFT、软件锁相环的完整工程范例
+- 当作电赛信号类题目的起点：换掉 DDS 型号或改控制目标即可复用整条链路
+- 对照 [`说明`](../说明) 里的逐行解析读代码（注：该目录未随仓库公开）
+
+### 已知问题的正确修法
+
+第 9 节列的限制都是设计取舍，不是待办事项。真要改进，优先考虑：
+
+1. 换档加迟滞，减少 5 秒重探与自动量程互相拉扯
+2. FFT 加到 2048 点并配重叠窗，把频率分辨率从 ±48 Hz 压下去
+3. 幅度进软件闭环（需要可编程增益级，硬件改动）
+
