@@ -12,9 +12,6 @@ STM32F407 + AD9834 的相位闭环装置，2026 年电子设计竞赛 F 题实�
 
 ![硬件全貌](docs/images/board-overview.jpg)
 
-主控、DDS、输入/输出调理三块板加一组独立电池，全部洞洞板手焊（输出调理板打了 PCB）。
-桌面布置、每块板的位置与作用，以及 K230 的识别画面见 [`docs/hardware.md`](docs/hardware.md) 第 7 节。
-
 ---
 
 ## 1. 问题与思路
