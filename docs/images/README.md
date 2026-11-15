@@ -26,6 +26,8 @@
 
 `k230-detection.jpg` 是软件截图，本身只有 728 px 宽，无需再压缩。
 
+另有一张 `video-cover.jpg`（1280×720，158 KB）：B 站视频封面，只用作 README 里跳转视频的缩略图，不属于拍摄清单。
+
 ## 怎么处理
 
 把手机原图放进 `docs/images/_raw/`（该目录已被 `.gitignore` 排除，不会被提交），然后：

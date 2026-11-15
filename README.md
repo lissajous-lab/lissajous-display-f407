@@ -22,6 +22,10 @@ STM32F407 + AD9834 的相位闭环装置，2026 年电子设计竞赛 F 题实�
 
 K230 拍到的示波器屏幕，此时是二倍频的「∞」形，彩色框是它自己画的边缘 ROI。
 
+[![演示视频](docs/images/video-cover.jpg)](https://www.bilibili.com/video/BV1f3sn6QEEm)
+
+▶ [B 站：26 电赛回忆录（42 秒）](https://www.bilibili.com/video/BV1f3sn6QEEm)
+
 更多照片与接线见 [`docs/hardware.md`](docs/hardware.md)。
 
 ---

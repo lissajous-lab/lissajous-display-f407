@@ -26,18 +26,18 @@ GitHub 还有硬限制：
 
 ### 2.1 传 B 站（能被别人看到）
 
-1. 上传到 B 站，标题写清楚：`2026 电赛 F 题 李萨如图形显示控制装置 完整演示`
-2. 简介里挂仓库链接：`https://github.com/lissajous-lab/lissajous-display-f407`
-3. 拿到 BV 号，填进 README
+视频已上传：<https://www.bilibili.com/video/BV1f3sn6QEEm>
 
 GitHub 的 README **不渲染 `<iframe>`**（会剥掉），所以只能用「缩略图 + 链接」的写法：
 
 ```markdown
-[![演示视频](docs/images/video-thumb.jpg)](https://www.bilibili.com/video/BV1xxxxxxxxx)
+[![演示视频](docs/images/video-cover.jpg)](https://www.bilibili.com/video/BV1f3sn6QEEm)
 ```
 
-缩略图就是视频封面截图，压到 500 KB 以内放进 `docs/images/`。
+缩略图 `docs/images/video-cover.jpg` 取自 B 站封面（1280×720，158 KB，EXIF 已清）。
 点图跳到 B 站，这是 GitHub 上的通行做法。
+
+以后换视频只需改 BV 号，封面重新截一张按同样规格压缩即可。
 
 ### 2.2 传 Release（保证永不丢失）
 
