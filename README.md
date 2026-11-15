@@ -10,10 +10,10 @@ STM32F407 + AD9834 的相位闭环装置，2026 年电子设计竞赛 F 题实�
 
 裸机前后台架构，无 RTOS。
 
-![整机实物](docs/images/board-overview.jpg)
+![硬件全貌](docs/images/board-overview.jpg)
 
-上图是第五题联调时的桌面：示波器只露屏幕给 K230 看（赛题要求两者不得有电气耦合），
-各设备的位置与作用见 [`docs/hardware.md`](docs/hardware.md) 第 7 节。
+主控、DDS、输入/输出调理三块板加一组独立电池，全部洞洞板手焊（输出调理板打了 PCB）。
+桌面布置、每块板的位置与作用，以及 K230 的识别画面见 [`docs/hardware.md`](docs/hardware.md) 第 7 节。
 
 ---
 
@@ -421,8 +421,10 @@ Vpp_mV = 4 × |V| × 3300 / (窗和 × 4095)
 
 更多资料：[`docs/problem.md`](docs/problem.md) 赛题与实现对照 · [`docs/hardware.md`](docs/hardware.md) 硬件清单与接线 · [`docs/vision-protocol.md`](docs/vision-protocol.md) 第五题串口协议 · [`docs/history.md`](docs/history.md) 资料整理说明 · [`docs/media.md`](docs/media.md) 照片视频存放
 
-**分工说明**：这是队伍的参赛作品，队内负责视觉的同学实现了 `vision_slave.c` 与 `K230/main.py`，
-其余模块由本仓库维护者完成。具体见 [`K230/README.md`](K230/README.md) 第 7 节。
+**分工说明**：这是三人队伍的参赛作品。仓库最初由队内负责视觉的同学（`C1LVE7`）建立，
+`vision_slave.c` 与 `K230/main.py` 也出自他手；前四题的采样、测频测幅测相、锁相环与显示，
+以及赛后的代码整理和全部文档由本仓库维护者（`lissajous-lab`）完成。
+细节见 [`docs/history.md`](docs/history.md) 第 5 节与 [`K230/README.md`](K230/README.md) 第 7 节。
 
 参与改进前请先看 [`CONTRIBUTING.md`](CONTRIBUTING.md)，要点：
 

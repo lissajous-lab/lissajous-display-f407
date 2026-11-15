@@ -17,10 +17,14 @@
 | 文件名 | 内容 | 状态 |
 |---|---|---|
 | `board-overview.jpg` | 整机俯视，能看出各模块怎么拼起来 | 已收录 |
-| `analog-frontend.jpg` | 输入/输出调理的洞洞板（这块没有原理图，照片就是唯一资料） | 待拍 |
+| `bench-setup.jpg` | 桌面布置：信号源、示波器、笔记本、装置 | 已收录 |
+| `k230-detection.jpg` | K230 相机画面与识别框（∞ 形） | 已收录 |
+| `analog-frontend.jpg` | 输入/输出调理板的正反面特写（没有原理图，照片就是唯一资料） | 待拍 |
 | `scope-locked.jpg` | 示波器上静止的李萨如图形 | 待拍 |
-| `scope-infinity.jpg` | 二倍频的「∞」形 | 待拍 |
+| `scope-infinity.jpg` | 示波器上真实的「∞」形 | 待拍 |
 | `k230-setup.jpg` | K230 摄像头对准示波器屏幕的机械布置 | 待拍 |
+
+`k230-detection.jpg` 是软件截图，本身只有 728 px 宽，无需再压缩。
 
 ## 怎么处理
 
