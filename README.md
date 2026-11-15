@@ -10,6 +10,11 @@ STM32F407 + AD9834 的相位闭环装置，2026 年电子设计竞赛 F 题实�
 
 裸机前后台架构，无 RTOS。
 
+![整机实物](docs/images/board-overview.jpg)
+
+上图是第五题联调时的桌面：示波器只露屏幕给 K230 看（赛题要求两者不得有电气耦合），
+各设备的位置与作用见 [`docs/hardware.md`](docs/hardware.md) 第 7 节。
+
 ---
 
 ## 1. 问题与思路
