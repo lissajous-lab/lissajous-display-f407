@@ -27,7 +27,7 @@ GitHub 还有硬限制：
 ### 2.1 传 B 站（能被别人看到）
 
 1. 上传到 B 站，标题写清楚：`2026 电赛 F 题 李萨如图形显示控制装置 完整演示`
-2. 简介里挂仓库链接：`https://github.com/C1LVE7/lissajous-display-f407`
+2. 简介里挂仓库链接：`https://github.com/13788646421ab-sys/lissajous-display-f407`
 3. 拿到 BV 号，填进 README
 
 GitHub 的 README **不渲染 `<iframe>`**（会剥掉），所以只能用「缩略图 + 链接」的写法：
