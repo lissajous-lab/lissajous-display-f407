@@ -12,6 +12,18 @@ STM32F407 + AD9834 的相位闭环装置，2026 年电子设计竞赛 F 题实�
 
 ![硬件全貌](docs/images/board-overview.jpg)
 
+整套装置：STM32F407 主控、AD9834 DDS 模块、输入与输出调理板，右下是给装置单独供电的电池组。
+
+![联调现场](docs/images/bench-setup.jpg)
+
+联调现场：左边信号源与示波器，中间笔记本跑 FFT 频谱与 CanMV，前面是装置本体。
+
+![K230 识别画面](docs/images/k230-detection.jpg)
+
+K230 拍到的示波器屏幕，此时是二倍频的「∞」形，彩色框是它自己画的边缘 ROI。
+
+更多照片与接线见 [`docs/hardware.md`](docs/hardware.md)。
+
 ---
 
 ## 1. 问题与思路

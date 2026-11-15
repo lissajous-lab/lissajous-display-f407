@@ -181,9 +181,17 @@ USART1（日志）、USART3（K230）、FSMC（屏幕）、GPIO（按键 / DDS �
 
 ![硬件全貌](images/board-overview.jpg)
 
-![桌面布置](images/bench-setup.jpg)
+整套装置：STM32F407 主控、AD9834 DDS 模块、输入与输出调理板，右下是给装置单独供电的电池组。
+
+![联调现场](images/bench-setup.jpg)
+
+联调现场：左边信号源与示波器，中间笔记本跑 FFT 频谱与 CanMV，前面是装置本体。
 
 ![K230 识别画面](images/k230-detection.jpg)
+
+K230 拍到的示波器屏幕，此时是二倍频的「∞」形，彩色框是它自己画的边缘 ROI。
+
+存放与压缩规则见 [`media.md`](media.md)。
 
 ---
 
